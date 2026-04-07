@@ -452,21 +452,21 @@
 
   .reveal-slide {
     opacity: 0;
-    filter: blur(3px);
+    filter: blur(2px);
     transition:
-      opacity 650ms ease,
-      transform 650ms ease,
-      filter 650ms ease;
+      opacity 560ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 560ms cubic-bezier(0.22, 1, 0.36, 1),
+      filter 560ms cubic-bezier(0.22, 1, 0.36, 1);
     transition-delay: var(--reveal-delay, 0ms);
     will-change: transform, opacity, filter;
   }
 
   .reveal-slide.from-left {
-    transform: translateX(-34px);
+    transform: translateX(-22px);
   }
 
   .reveal-slide.from-right {
-    transform: translateX(34px);
+    transform: translateX(22px);
   }
 
   .reveal-slide.is-visible {
