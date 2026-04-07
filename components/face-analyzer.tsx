@@ -169,7 +169,7 @@ export function FaceAnalyzer() {
       <section id="escaner" className="mx-auto max-w-6xl px-6 py-16 md:py-24">
         <div className="ice-panel rounded-3xl p-6 md:p-8">
           <div className="grid gap-4 md:grid-cols-3">
-            <RevealOnScroll direction="left">
+            <RevealOnScroll direction="left" className="h-full">
               <StepCard
                 icon={<ScanFace className="h-5 w-5" />}
                 step="01"
@@ -177,7 +177,7 @@ export function FaceAnalyzer() {
                 description="Detecta puntos clave y proporciones en segundos."
               />
             </RevealOnScroll>
-            <RevealOnScroll direction="right" delay={90}>
+            <RevealOnScroll direction="right" delay={90} className="h-full">
               <StepCard
                 icon={<Zap className="h-5 w-5" />}
                 step="02"
@@ -185,7 +185,7 @@ export function FaceAnalyzer() {
                 description="Estilos que encajan con tu forma facial."
               />
             </RevealOnScroll>
-            <RevealOnScroll direction="left" delay={180}>
+            <RevealOnScroll direction="left" delay={180} className="h-full">
               <StepCard
                 icon={<Scissors className="h-5 w-5" />}
                 step="03"
@@ -454,7 +454,7 @@ function StepCard({
   description: string
 }) {
   return (
-    <div className="ice-card group rounded-2xl p-5 transition-colors hover:border-primary/40">
+    <div className="ice-card group h-full rounded-2xl p-5 transition-colors hover:border-primary/40">
       <div className="flex items-center gap-3 mb-3">
         <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/15 text-primary group-hover:bg-primary/25 transition-colors shadow-[0_0_18px_rgba(76,201,255,0.25)]">
           {icon}
